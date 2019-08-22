@@ -39,7 +39,12 @@ class Ps_Platba360ValidationModuleFrontController extends ModuleFrontController 
     }
 
     private function generatePaymentLink($orderId, $total) {
-        $url = 'https://platba360.cz';
+
+//        TODO: for production access use this url
+//        $url = 'https://platba360.cz';
+
+        $url = 'https://uat1-platba360.csast.csas.cz';
+
         $query = $this->prepareQuery($orderId, $total);
         $launchUrl = $url . '?' . $this->signQuery($query, Configuration::get('PLATBA360_SECRET'));
         return $launchUrl;
