@@ -93,7 +93,8 @@ class Ps_Platba360 extends PaymentModule {
         $newOption = new PaymentOption();
         $newOption->setModuleName($this->name)
                 ->setCallToActionText($this->trans('Zaplatit přes Platbu z účtu', array(), 'Modules.Platba360.Admin'))
-                ->setAction($this->context->link->getModuleLink($this->name, 'validation', array(), true));
+                ->setAction($this->context->link->getModuleLink($this->name, 'validation', array(), true))
+                ->setAdditionalInformation($this->display(__FILE__, './views/templates/hook/ps_platba360_intro.tpl'));
 
         return [$newOption];
     }
