@@ -13,12 +13,16 @@ class Ps_Platba360CallbackModuleFrontController extends ModuleFrontController
 
         if($order->id != null){
             if($this->isValid($order)){
+                $history = new OrderHistory();
+                $history->id_order = (int)$order->id;
+
                 if(Tools::getValue('completed') == 'Y'){
-                    $history = new OrderHistory();
-                    $history->id_order = (int)$order->id;
                     $statusId = Configuration::get('PS_OS_PAYMENT');
-                    $history->changeIdOrderState($statusId, (int)($order->id));
+                } else {
+                    $statusId = Configuration::get('PS_OS_ERROR');
                 }
+
+                $history->changeIdOrderState($statusId, (int)($order->id));
                 Tools::redirect('index.php?controller=order-confirmation&id_cart='.(int)$order->id_cart.'&id_module='.(int)$this->module->id.'&id_order='.$order->id.'&key='.$order->secure_key);
             }
         } 
