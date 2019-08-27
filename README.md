@@ -8,9 +8,9 @@ Plugin pro snadnou integraci platební brány Platba mezi všemi pro eshopy bě�
 4. Dalším krokem je konfigurace modulu.
 
 ## Jak si službu zřídit?
-1. Na e-mail platba360@csas.cz pošlete email s žádostí o spolupráci (Pokud přiložíte kontakty na vás a vaše IČ celý proces se urychlí)
-2. Připravíme návrh smlouvy, který vám zašleme na e-mail
-3. Pokud se smlouvou souhlasíte, podepíšete smlouvu a zašlete nám ji emailem zpět
+1. Vyplňte náš [formulář](https://forms.gle/zpkRsBDJ1fXPm5UZA).
+2. Připravíme návrh smlouvy, který vám zašleme na e-mail.
+3. Pokud se smlouvou souhlasíte, podepíšete smlouvu a zašlete nám ji e-mailem zpět.
 4. Od nás obdržíte ShopId a Secret
 
 ## Jak nakonfigurovat modul?
