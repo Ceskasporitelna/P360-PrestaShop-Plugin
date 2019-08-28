@@ -36,7 +36,7 @@ class Ps_Platba360CallbackModuleFrontController extends ModuleFrontController
                 $history->id_order = (int)$order->id;
 
                 if(Tools::getValue('completed') == 'Y'){
-                    $statusId = Configuration::get('PS_OS_PAYMENT');
+                    $statusId = Configuration::get('PS_OS_BANKWIRE');
                 } else {
                     $statusId = Configuration::get('PS_OS_ERROR');
                 }

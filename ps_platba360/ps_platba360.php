@@ -122,7 +122,7 @@ class Ps_Platba360 extends PaymentModule {
             return;
         }
         $state = $params['order']->getCurrentState();
-        if (in_array($state, array(Configuration::get('PS_OS_PAYMENT')))) {
+        if (in_array($state, array(Configuration::get('PS_OS_BANKWIRE')))) {
             $this->smarty->assign(array(
                 'status' => 'ok',
                 'id_order' => $params['order']->id
